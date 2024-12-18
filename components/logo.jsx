@@ -9,10 +9,6 @@ export default function Logo() {
                 style={styles.logo}
                 resizeMode="contain"
             />
-            <Text style={styles.title}>CareConnect</Text>
-            <Text style={styles.subtitle}>
-                Effortless communication for better patient care.
-            </Text>
         </View>
     );
 };

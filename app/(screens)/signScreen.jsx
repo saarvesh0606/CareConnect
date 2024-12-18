@@ -3,14 +3,16 @@ import { View, Text, StyleSheet, TouchableOpacity, SafeAreaView } from 'react-na
 import Logo from '../../components/logo';
 import Input from '../../components/signScreenComponents/input'
 import Button from '../../components/Button';
+import { router } from 'expo-router';
 
-export const LoginScreen = () => {
+export default function LoginScreen() {
     const [id, setId] = useState('');
     const [password, setPassword] = useState('');
 
     const handleLogin = () => {
         // Handle login logic here
         console.log('Login attempted with:', { id, password });
+        router.push('/(screens)/patientScreen')
     };
 
     const handleForgotPassword = () => {
@@ -20,12 +22,10 @@ export const LoginScreen = () => {
 
     return (
         <SafeAreaView style={styles.container}>
-            <StatusBar />
             <View style={styles.content}>
                 <Logo />
                 <Text style={styles.title}>CareConnect</Text>
                 <Text style={styles.subtitle}>Login in with your credentials</Text>
-
                 <View style={styles.form}>
                     <Input
                         placeholder="Employee ID / Patient ID"
@@ -80,9 +80,9 @@ const styles = StyleSheet.create({
         marginTop: 16,
     },
     forgotPassword: {
-        alignSelf: 'flex-end',
-        marginTop: -8,
+        marginTop: 15,
         marginBottom: 32,
+        alignItems: 'center'
     },
     forgotPasswordText: {
         color: '#666',
