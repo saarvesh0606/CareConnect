@@ -10,7 +10,7 @@ import { router } from 'expo-router';
 
 export default function OnboardingScreen() {
   const handleRoleSelect = (role) => {
-    // Handle role selection
+    router.push('/(screens)/nurseScreen')
     console.log('Selected role:', role);
   };
 
