@@ -16,7 +16,10 @@ export default function LoginScreen() {
     };
 
     const handleForgotPassword = () => {
-        // Handle forgot password logic here
+        // Handle forgot password logic here 
+
+        // change this proper logic
+        router.push('/(screens)/forgotPasswordScreen')
         console.log('Forgot password pressed');
     };
 

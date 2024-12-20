@@ -1,6 +1,7 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, Pressable } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { router } from 'expo-router';
 
 
 export default function Header({ name, employeeId, department, wardNo }) {
@@ -11,7 +12,9 @@ export default function Header({ name, employeeId, department, wardNo }) {
                     <Text style={styles.welcomeText}>Welcome,</Text>
                     <Text style={styles.nameText}>{name}</Text>
                 </View>
-                <MaterialCommunityIcons name="clipboard-text" size={24} color="#006400" />
+                <Pressable onPress={console.log('Clipboard clicked')}>
+                    <MaterialCommunityIcons name="clipboard-text" size={24} color="#006400" />
+                </Pressable>
             </View>
             <View style={styles.detailsSection}>
                 <Text style={styles.detailText}>Employee ID : {employeeId}</Text>

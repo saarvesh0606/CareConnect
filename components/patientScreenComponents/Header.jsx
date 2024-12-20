@@ -1,10 +1,11 @@
 import React from 'react';
-import { View, Text, Image, StyleSheet } from 'react-native';
-
-export default function Header({ patientName, patientId }) {
-
+import { View, Text, Image, StyleSheet, Pressable } from 'react-native';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 
+
+
+export default function Header({ patientName, patientId, onPress }) {
 
     //#1Todo: Patient name and Patient Id both will come from the login Screen
     //#2 Figure out how to transfer data from one screen to another
@@ -20,6 +21,11 @@ export default function Header({ patientName, patientId }) {
                     <Text style={styles.welcomeText}>Welcome,</Text>
                     <Text style={styles.nameText}>{patientName}</Text>
                     <Text style={styles.idText}>Patient ID : {patientId}</Text>
+                </View>
+                <View style={styles.history_Icon_n_Text}>
+                    <Pressable onPress={onPress}>
+                        <MaterialCommunityIcons name="menu" size={35} color="#008B8B" />
+                    </Pressable>
                 </View>
             </View>
         </View>
@@ -61,5 +67,13 @@ const styles = StyleSheet.create({
         color: '#555',
         marginTop: 4,
     },
+    history_Icon_n_Text: {
+        fontSize: 16,
+        color: 'black',
+        alignItems: 'center',
+        flex: 'row',
+        alignItems: 'center',
+        padding: 10,
+    }
 });
 
