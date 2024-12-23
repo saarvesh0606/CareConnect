@@ -21,7 +21,7 @@ export default function LoginScreen() {
     const handleLogin = () => {
         // Handle login logic here
         console.log('Login attempted with:', { id, password });
-        router.push('/(screens)/patientScreen')
+        router.push('/(screens)/nurseScreen')
     };
 
     const handleForgotPassword = () => {
