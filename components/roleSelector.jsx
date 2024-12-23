@@ -3,7 +3,7 @@ import { View, Text, TouchableOpacity, StyleSheet, Image } from 'react-native';
 
 export default function RoleSelector({ onSelectRole }) {
     const [selectedRole, setSelectedRole] = useState(null);
-    
+
     const handleRolePress = (role) => {
         setSelectedRole(role);
         onSelectRole(role);
@@ -86,12 +86,12 @@ const styles = StyleSheet.create({
         padding: 16,
     },
     selectedButton: {
-        backgroundColor: '##B0B0B0', 
-        width: 150, 
-        borderRadius: 75, 
+        backgroundColor: '##B0B0B0',
+        width: 150,
+        borderRadius: 75,
         justifyContent: 'center',
         alignItems: 'center',
-        borderWidth: 2, 
+        borderWidth: 2,
         borderColor: '#000',
     },
     iconCircle: {
@@ -102,7 +102,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     selectedIcon: {
-        opacity: 1, 
+        opacity: 1,
     },
     icon: {
         width: 70,
