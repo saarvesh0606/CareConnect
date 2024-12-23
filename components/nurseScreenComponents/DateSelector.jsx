@@ -49,20 +49,20 @@ export default function DateSelector() {
 
 const styles = StyleSheet.create({
     container: {
-        marginVertical: 10,
+        flexGrow: 0,
+        marginVertical: 20,
     },
     dateItem: {
-        width: 50,
-        height: 70,
-        justifyContent: 'center',
         alignItems: 'center',
+        padding: 10,
         marginHorizontal: 5,
-        borderRadius: 25,
+        borderRadius: 10,
+        width: 60,
     },
     selectedDate: {
         backgroundColor: '#006400',
     },
-    dayNumber: {
+    dayText: {
         fontSize: 18,
         fontWeight: 'bold',
         color: '#333',

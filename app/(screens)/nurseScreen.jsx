@@ -20,7 +20,7 @@ export default function NurseDashboardScreen() {
             />
             <DateSelector />
             <TaskList />
-            <LogoutButton onPress={handleLogout} />
+            <LogoutButton />
         </SafeAreaView>
     );
 };
