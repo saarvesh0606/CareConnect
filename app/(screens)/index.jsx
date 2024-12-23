@@ -9,13 +9,33 @@ import { router } from 'expo-router';
 
 
 export default function OnboardingScreen() {
+
+  var role_decider = "";
+
   const handleRoleSelect = (role) => {
-    router.push('/(screens)/nurseScreen')
-    console.log('Selected role:', role);
+    if (role === 'nurse') {
+      role_decider = role;
+      console.log('Selected role:', role);
+    }
+    else {
+      role_decider = role;
+      console.log('Selected role:', role);
+    }
+
+
   };
 
   const handleContinue = () => {
-    router.push('/(screens)/signScreen')
+    if (role_decider === null) {
+      console.log("Please select a role");
+    }
+    if (role_decider === 'nurse') {
+      router.push('/(screens)/NursesignScreen');
+    }
+    if (role_decider === 'patient') {
+      router.push('/(screens)/PatientsignScreen')
+    }
+
   };
 
   return (
