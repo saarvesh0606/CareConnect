@@ -70,7 +70,7 @@ export default function RoleSelector({ onSelectRole }) {
 const styles = StyleSheet.create({
     container: {
         alignItems: 'center',
-        marginVertical: 40,
+        marginVertical: 90,
     },
     label: {
         fontSize: 16,
@@ -86,9 +86,9 @@ const styles = StyleSheet.create({
         padding: 16,
     },
     selectedButton: {
-        backgroundColor: '##B0B0B0',
+        backgroundColor: '#A8E6CE',
         width: 150,
-        borderRadius: 75,
+        borderRadius: 90,
         justifyContent: 'center',
         alignItems: 'center',
         borderWidth: 2,
