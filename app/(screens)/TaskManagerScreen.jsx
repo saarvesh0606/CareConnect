@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { SafeAreaView, StyleSheet, Text, TouchableOpacity, View, ScrollView } from 'react-native';
 import { useRouter } from 'expo-router';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 const TaskManagerScreen = () => {
   const router = useRouter();
@@ -18,9 +19,10 @@ const TaskManagerScreen = () => {
   return (
     <SafeAreaView style={styles.container}>
       {/* Back button navigates to NurseScreen */}
-      <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
-        <Text style={styles.backButtonText}>← Back</Text>
-      </TouchableOpacity>
+      <TouchableOpacity style={styles.backButton} onPress={() => router.push('/nurseScreen')}>
+             <Icon name="chevron-left" size={20} color="#007E7E" />
+             <Text style={styles.backText}>Back</Text>
+           </TouchableOpacity>
 
       {/* Slider Button */}
       <View style={styles.sliderContainer}>
@@ -67,15 +69,18 @@ const styles = StyleSheet.create({
     padding: 16,
   },
   backButton: {
-    marginBottom: 16,
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginVertical: 10,
   },
-  backButtonText: {
-    fontSize: 18,
-    color: '#007BFF',
+  backText: {
+    marginLeft: 5,
+    fontSize: 16,
+    color: '#007E7E',
   },
   sliderContainer: {
     flexDirection: 'row',
-    backgroundColor: '#E0E0E0', // Grey background for the slider
+    backgroundColor: '#FFF', // Grey background for the slider
     borderRadius: 8,
     padding: 4,
     marginBottom: 16,
@@ -87,12 +92,12 @@ const styles = StyleSheet.create({
     borderRadius: 8,
   },
   activeSlider: {
-    backgroundColor: '#4CAF50', // Green background for the active tab
-    borderColor: '#388E3C',
+    backgroundColor: '#006400', // Green background for the active tab
+    borderColor: '#006400',
     borderWidth: 2,
   },
   sliderText: {
-    color: '#757575', // Grey text for inactive tabs
+    color: '#000', // Grey text for inactive tabs
     fontSize: 16,
     fontWeight: 'bold',
   },
