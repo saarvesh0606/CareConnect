@@ -2,10 +2,9 @@ import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
 
-export default function TaskItem({ time, room, bed, request, isUrgent = false }) {
+export default function TaskItem({ room, bed, request, isUrgent = false }) {
     return (
         <View style={styles.container}>
-            <Text style={styles.timeText}>{time}</Text>
             <View style={[styles.taskContent, isUrgent && styles.urgentTask]}>
                 <Text style={styles.locationText}>{room}, {bed}</Text>
                 <Text style={styles.requestText}>{request}</Text>
