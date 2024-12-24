@@ -5,6 +5,7 @@ import Header from '../../components/patientScreenComponents/Header';
 import DateSelector from '../../components/patientScreenComponents/DataSelector';
 import VoiceRecorder from '../../components/patientScreenComponents/VoiceRecorder';
 import MessageInput from '../../components/patientScreenComponents/MessageInput';
+import SendButton from '../../components/patientScreenComponents/SendButton';
 import EmergencyButton from '../../components/patientScreenComponents/EmergencyButton';
 
 export default function PatientHomeScreen() {
@@ -20,6 +21,7 @@ export default function PatientHomeScreen() {
                 <VoiceRecorder />
                 <MessageInput />
             </ScrollView>
+            <SendButton />
             <EmergencyButton />
         </SafeAreaView>
     );
