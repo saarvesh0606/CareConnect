@@ -44,7 +44,7 @@ const RequestHistoryScreen = () => {
   return (
     <SafeAreaView style={styles.container}>
       {/* Back Button */}
-      <TouchableOpacity style={styles.backButton} onPress={() => router.push('/patientScreen')}>
+      <TouchableOpacity style={styles.backButton} onPress={() => router.back()}>
         <Icon name="chevron-left" size={20} color="#007E7E" />
         <Text style={styles.backText}>Back</Text>
       </TouchableOpacity>

@@ -4,7 +4,8 @@ import Logo from '../../components/logo';
 import RoleSelector from '../../components/roleSelector';
 import Button from '../../components/Button'
 import { router } from 'expo-router';
-
+import { StatusBar } from 'react-native';
+import { Header } from '@react-navigation/elements';
 
 
 
@@ -52,6 +53,7 @@ export default function OnboardingScreen() {
     </SafeAreaView>
   );
 };
+
 
 const styles = StyleSheet.create({
   container: {

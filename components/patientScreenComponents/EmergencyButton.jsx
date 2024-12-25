@@ -10,7 +10,7 @@ export default function EmergencyButton() {
     return (
         <TouchableOpacity style={styles.button} onPress={handleEmergency}>
             <MaterialIcons name="warning" size={24} color="yellow" />
-            <Text style={styles.text}>Emergency</Text>
+            <Text style={styles.text}>Emergency Request</Text>
         </TouchableOpacity>
     );
 };

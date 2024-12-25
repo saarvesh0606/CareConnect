@@ -4,6 +4,7 @@ import Logo from '../../components/logo';
 import Input from '../../components/signScreenComponents/input'
 import Button from '../../components/Button';
 import { router } from 'expo-router';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 /*
 
@@ -34,6 +35,10 @@ export default function LoginScreen() {
 
     return (
         <SafeAreaView style={styles.container}>
+            <TouchableOpacity style={styles.backButton} onPress={() => router.back()}>
+                <Icon name="chevron-left" size={20} color="#007E7E" style={{ marginRight: 10 }} />
+                <Text style={styles.backText}>Back</Text>
+            </TouchableOpacity>
             <View style={styles.content}>
                 <Logo />
                 <Text style={styles.title}>CareConnect</Text>
@@ -70,6 +75,17 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#FFF',
+    },
+    backButton: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        marginVertical: 10,
+        marginHorizontal: 10,
+    },
+    backText: {
+        marginLeft: 5,
+        fontSize: 16,
+        color: '#007E7E',
     },
     content: {
         flex: 1,
