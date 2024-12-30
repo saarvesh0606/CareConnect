@@ -1,4 +1,4 @@
-import React from 'react';
+                                                                                                                                                                                                                                               import React from 'react';
 import { ScrollView, StyleSheet, TouchableOpacity, Text, View } from 'react-native';
 
 const DateItem = ({ day, weekday, isSelected, onSelect }) => (
@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
     wrapper: {
         marginVertical: 0, // Removes unnecessary vertical space
         paddingVertical: 5, // Optional: Adjust as needed
-        backgroundColor: '#E3FFE3', // Optional background to match the header theme
+        backgroundColor: '#97D5CD', // Optional background to match the header theme
     },
     container: {
         flexGrow: 0,
@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
         width: 60,
     },
     selectedDate: {
-        backgroundColor: '#006400',
+        backgroundColor: '#0C8893',
     },
     dayNumber: {
         fontSize: 18,
@@ -86,5 +86,5 @@ const styles = StyleSheet.create({
     },
     selectedText: {
         color: '#fff',
-    },
+    },
 });

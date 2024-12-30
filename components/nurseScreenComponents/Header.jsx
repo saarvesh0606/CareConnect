@@ -13,7 +13,7 @@ export default function Header({ name, employeeId, department, wardNo }) {
         <View style={styles.container}>
             <View style={styles.profileSection}>
                 <Image
-                    source={require('../../assets/images/profileIcon-patient.png')}
+                    source={require('../../assets/images/Nurseicon.png')}
                     style={styles.profileImage}
                  />
             <View style={styles.detailsSection}>
