@@ -21,8 +21,13 @@
     "@react-navigation/elements": "^2.2.5",
     "@react-navigation/native": "^7.0.14",
     "@react-navigation/native-stack": "^7.2.0",
+<<<<<<< HEAD
     "careconnect": "file:",
     "expo": "^52.0.23",
+=======
+    "axios": "^1.7.9",
+    "expo": "^52.0.19",
+>>>>>>> c7dd3fc5051babe1098b6c82bf5e8381d31dbaaa
     "expo-blur": "~14.0.1",
     "expo-constants": "~17.0.3",
     "expo-font": "^13.0.1",
